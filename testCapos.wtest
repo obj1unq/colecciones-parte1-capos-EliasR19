@@ -1,1 +1,13 @@
-r
+import capos.*
+
+describe "Test 1 Rolando"{
+    test "Encuentra dos cosas"{
+        rolando.agarrar(espadaDelDestino)
+        rolando.agarrar(libroDeHechizos)
+        rolando.agarrar(collarDivino)
+        assert.equals(#{espadaDelDestino,libroDeHechizos}, 
+        rolando.inventario())
+
+    }
+
+}

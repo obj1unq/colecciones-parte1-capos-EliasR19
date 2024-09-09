@@ -1,0 +1,37 @@
+object rolando{
+    var property maxArtefactos = 2
+    var inventario = #{}     //lista
+
+    method inventario(){
+        return inventario
+    }
+
+    method agarrar(artefacto){
+        if(!self.estaLLeno()){
+            inventario.add(artefacto)
+        } else {
+            return "LLeno"
+        }
+    }
+    
+    method estaLLeno(){
+        return inventario.size() >= self.maxArtefactos()
+    }
+}
+
+
+object espadaDelDestino{
+
+}
+
+object libroDeHechizos{
+
+}
+
+object collarDivino{
+
+}
+
+object armaduraValyrio{
+
+}
