@@ -1,6 +1,9 @@
+// JUGADORES
 object rolando{
     var property maxArtefactos = 2
-    var inventario = #{}     //lista
+    const inventario = #{}     //lista
+    // const porque la mochila siempre es la misma,
+    // solo se le agregan cosas.
 
     method inventario(){
         return inventario
@@ -19,7 +22,7 @@ object rolando{
     }
 }
 
-
+// ARTEFECTOS
 object espadaDelDestino{
 
 }
