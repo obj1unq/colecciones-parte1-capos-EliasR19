@@ -2,20 +2,20 @@ import capos.*
 
 describe "Test 1 Rolando"{
     test "Encuentra dos cosas"{
-        rolando.agarrar(espadaDelDestino)
-        rolando.agarrar(libroDeHechizos)
-        rolando.agarrar(collarDivino)
+        rolando.encontrar(espadaDelDestino)
+        rolando.encontrar(libroDeHechizos)
+        rolando.encontrar(collarDivino)
         assert.equals(#{espadaDelDestino,libroDeHechizos}, 
         rolando.inventario())
 
     }
 
     test "2 Dejar cosas en el castillo"{
-        rolando.agarrar(espadaDelDestino)
-        rolando.agarrar(libroDeHechizos)
+        rolando.encontrar(espadaDelDestino)
+        rolando.encontrar(libroDeHechizos)
         rolando.irAHogar()
         assert.notThat(rolando.estaLleno())
-        rolando.agarrar(collarDivino)
+        rolando.encontrar(collarDivino)
         rolando.irAHogar()
         assert.notThat(rolando.estaLleno())
         assert.equals(#{espadaDelDestino,
@@ -26,11 +26,20 @@ describe "Test 1 Rolando"{
 
     test "3.1 Rolando tiene todo >:D"{
         castillo.almacenar( #{collarDivino, espadaDelDestino})
-        rolando.agarrar( armaduraValyrio )
+        rolando.encontrar( armaduraValyrio )
         assert.equals(#{collarDivino, espadaDelDestino, armaduraValyrio}, rolando.poseeTotal())
         assert.notThat( rolando.posee(libroDeHechizos))
     }
 
-    
+    test "historial"{
+        rolando.encontrar(espadaDelDestino)
+        rolando.encontrar(libroDeHechizos)
+        rolando.encontrar(collarDivino)
+        rolando.irAHogar()
+        rolando.encontrar(armaduraValyrio)
+        rolando.encontrar(collarDivino)
+
+        assert.equals( [espadaDelDestino, libroDeHechizos, armaduraValyrio, collarDivino], rolando.historial())
+    }
 
 }

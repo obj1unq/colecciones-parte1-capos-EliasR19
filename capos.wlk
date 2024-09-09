@@ -5,17 +5,19 @@ object rolando{
     // const porque la mochila siempre es la misma,
     // solo se le agregan cosas.
     var property hogar = castillo
+    const historial = []
 
     method inventario(){
         return inventario
     }
 
-    method agarrar(artefacto){
+    method encontrar(artefacto){
         if(!self.estaLleno()){
             inventario.add(artefacto)
         } else {
             return "LLeno"
         }
+        historial.add(artefacto)
     }
     
     method estaLleno(){
@@ -41,6 +43,10 @@ object rolando{
 
     method posee(artefacto){
         return self.poseeTotal().contains(artefacto)
+    }
+
+    method historial(){
+        return historial
     }
 }
 

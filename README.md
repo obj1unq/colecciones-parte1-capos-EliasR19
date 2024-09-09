@@ -46,10 +46,10 @@ liberando espacio para poder levantar nuevos.
  
  También se quiere preguntar si posee un artefacto en especial.
  
-#Ejemplo: 
-	Si el castillo tiene el collar, la espada. Rolando tiene la armadura. 
-	Entonces rolando posee el collar, la espada y la armadura.
-	El libro no lo posee.
+### Ejemplo: 
+1. Si el castillo tiene el collar, la espada. Rolando tiene la armadura. 
+2. Entonces rolando posee el collar, la espada y la armadura.
+3. El libro no lo posee.
  
 ## Saber la historia de los encuentros con los artefactos.
  
