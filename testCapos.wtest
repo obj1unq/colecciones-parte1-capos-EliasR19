@@ -10,7 +10,7 @@ describe "Test 1 Rolando"{
 
     }
 
-    test "Dejar cosas en el castillo"{
+    test "2 Dejar cosas en el castillo"{
         rolando.agarrar(espadaDelDestino)
         rolando.agarrar(libroDeHechizos)
         rolando.irAHogar()
@@ -23,5 +23,14 @@ describe "Test 1 Rolando"{
                         collarDivino}, castillo.almacen())
         assert.that(rolando.inventario().isEmpty())  
     }
+
+    test "3.1 Rolando tiene todo >:D"{
+        castillo.almacenar( #{collarDivino, espadaDelDestino})
+        rolando.agarrar( armaduraValyrio )
+        assert.equals(#{collarDivino, espadaDelDestino, armaduraValyrio}, rolando.poseeTotal())
+        assert.notThat( rolando.posee(libroDeHechizos))
+    }
+
+    
 
 }

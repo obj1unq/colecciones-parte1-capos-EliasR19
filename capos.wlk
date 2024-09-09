@@ -29,6 +29,19 @@ object rolando{
         //inventario.removeAll(inventario)
 
     }
+
+    method inventarioOrdenado(){
+        return inventario.asList()
+    }
+
+    method poseeTotal(){
+        //return self.inventarioOrdenado().union(hogar.almacen())
+        return inventario.union(hogar.almacen())
+    }
+
+    method posee(artefacto){
+        return self.poseeTotal().contains(artefacto)
+    }
 }
 
 // HOGAR
