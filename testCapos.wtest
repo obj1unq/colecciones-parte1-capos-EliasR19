@@ -10,4 +10,18 @@ describe "Test 1 Rolando"{
 
     }
 
+    test "Dejar cosas en el castillo"{
+        rolando.agarrar(espadaDelDestino)
+        rolando.agarrar(libroDeHechizos)
+        rolando.irAHogar()
+        assert.notThat(rolando.estaLleno())
+        rolando.agarrar(collarDivino)
+        rolando.irAHogar()
+        assert.notThat(rolando.estaLleno())
+        assert.equals(#{espadaDelDestino,
+                        libroDeHechizos,
+                        collarDivino}, castillo.almacen())
+        assert.that(rolando.inventario().isEmpty())  
+    }
+
 }
